@@ -76,9 +76,10 @@ RUN set -ex ;\
         jq \
         python3-pip \
         gawk ;\
-    pip3 --no-cache-dir install --upgrade pip==18.1 ;\
+    pip3 --no-cache-dir install --upgrade pip ;\
     hash -r ;\
     pip3 --no-cache-dir install --upgrade setuptools ;\
+    pip3 --no-cache-dir install --upgrade wheel ;\
     # NOTE(srwilkers): Pinning ansible to 2.5.5, as pip installs 2.6 by default.
     # 2.6 introduces a new command flag (init) for the docker_container module
     # that is incompatible with what we have currently. 2.5.5 ensures we match

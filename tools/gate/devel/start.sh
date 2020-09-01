@@ -54,6 +54,7 @@ function ansible_install {
 
   sudo -H -E pip3 install --upgrade pip
   sudo -H -E pip3 install --upgrade setuptools
+  sudo -H -E pip3 install --upgrade wheel
   # NOTE(lamt) Preinstalling a capped version of cmd2 to address bug:
   # https://github.com/python-cmd2/cmd2/issues/421
   sudo -H -E pip3 install --upgrade "cmd2<=0.8.7"
